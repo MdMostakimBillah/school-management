@@ -1,0 +1,57 @@
+nav {
+  width: 100vw;
+  position: fixed;
+  background-color: rgb(228, 228, 228);
+}
+.logo {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+.middleList .mainNavList,
+.loginRegistration ul {
+  display: flex;
+}
+.middleList .mainNavList li,
+.loginRegistration ul li {
+  font-weight: 600;
+  position: relative;
+}
+.mainNavList li a {
+  display: block;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+.loginRegistration ul li a {
+  display: block;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+.middleList .mainNavList li:hover a,
+.loginRegistration ul li:hover a {
+  color: #32a93e;
+}
+.loginRegistration ul li:last-child {
+  background-color: #32a93e;
+  border-radius: 5px;
+}
+.loginRegistration ul li:last-child a {
+  color: #fff;
+}
+
+.submenuList {
+  position: absolute;
+  border-radius: 5px;
+  width: 150px;
+  background-color: #fff;
+  display: none;
+}
+.submenuList li:hover a {
+  background-color: rgb(153, 153, 153);
+  color: #fff !important;
+}
+.middleList .mainNavList li:hover .submenuList {
+  display: block;
+}
