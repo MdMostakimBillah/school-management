@@ -2,6 +2,7 @@ nav {
   width: 100vw;
   position: fixed;
   background-color: rgb(228, 228, 228);
+  z-index: 999;
 }
 .logo {
   width: 60px;
@@ -54,4 +55,59 @@ nav {
 }
 .middleList .mainNavList li:hover .submenuList {
   display: block;
+}
+.toggleBar {
+  padding: 5px 0;
+  display: none;
+  align-items: center;
+  user-select: none;
+  color: rgb(32, 32, 32);
+  cursor: pointer;
+  display: none;
+}
+.toggleBar span {
+  font-size: 30px;
+}
+.responsiveNavList {
+  display: none;
+  position: absolute;
+  top: 67px;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  /* background-color: red; */
+  width: 100%;
+  text-align: center;
+  margin-left: -767px;
+  transition: 0.3s;
+}
+.active {
+  margin-left: 0;
+}
+@media (max-width: 767px) {
+  .toggleBar {
+    display: flex;
+  }
+  .middleList,
+  .loginRegistration {
+    display: none;
+  }
+  .responsiveNavList,
+  .responsiveNavList .middleList,
+  .responsiveNavList .loginRegistration {
+    display: block;
+  }
+  .responsiveNavList .middleList .mainNavList {
+    display: block;
+  }
+  .responsiveNavList .loginRegistration ul {
+    display: block;
+  }
+  .submenuList {
+    top: 0;
+    z-index: 1;
+    border-radius: 0;
+  }
+  .loginRegistration ul li:last-child {
+    border-radius: 0;
+  }
 }
