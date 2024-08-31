@@ -6,7 +6,8 @@
   font-family: "Hind Siliguri", sans-serif;
   text-transform: capitalize;
 }
-a {
+a,
+b {
   text-decoration: none;
   color: rgb(32, 32, 32);
 }
@@ -15,6 +16,14 @@ ul li {
 }
 img {
   width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #32a93e;
 }
 /* flex between  */
 .flex-between {
@@ -32,6 +41,6 @@ img {
 
 @media (max-width: 1200px) {
   .container_page {
-    width: 90%;
+    width: 90% !important;
   }
 }

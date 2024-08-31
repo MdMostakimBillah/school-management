@@ -1,10 +1,14 @@
-import clases from "../style/Home.module.css";
+// import clases from "../style/Home.module.css";
 import Navigation from "../Navigation";
+import Aim from "../Aim";
 const Home = () => {
   return (
-    <div className={clases.container_page}>
+    <>
       <Navigation />
-    </div>
+      <div className="container_page">
+        <Aim />
+      </div>
+    </>
   );
 };
 

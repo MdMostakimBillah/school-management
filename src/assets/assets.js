@@ -1,4 +1,9 @@
 import logo from "./logo.png";
-import sampleLogo from "./hand-keep-book-read-source-600nw-1127076767.webp";
+import siteImage from "./Frame.jpg";
+import aimIcon from "./aim.png";
+import plan from "./undraw_goals_re_lu76.svg";
+
 export const mainLogo = logo;
-export const sample_Logo = sampleLogo;
+export const sample = siteImage;
+export const aimListIcon = aimIcon;
+export const myPlan = plan;

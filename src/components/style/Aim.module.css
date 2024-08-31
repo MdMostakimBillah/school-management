@@ -1,0 +1,56 @@
+.aimSectionWraper {
+  max-width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.first {
+  width: 47%;
+}
+.first img {
+  height: auto;
+  border-radius: 7px;
+}
+.second {
+  width: 50%;
+}
+.second h1 {
+  margin-bottom: 20px;
+}
+.second ul li {
+  margin-bottom: 10px;
+}
+
+.second ul li span {
+  color: #202020;
+  font-weight: 400;
+}
+.second ul li {
+  position: relative;
+  padding-left: 1.8em;
+}
+.second ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/aim.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .aimSectionWraper {
+    display: block;
+  }
+  .first {
+    width: 100%;
+    display: none;
+  }
+  .second {
+    width: 100%;
+  }
+}
