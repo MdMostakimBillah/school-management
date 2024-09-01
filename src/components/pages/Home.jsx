@@ -2,6 +2,7 @@
 import Navigation from "../Navigation";
 import Facilities from "../Facilities";
 import Aim from "../Aim";
+import GoodResultStudents from "../GoodResultStudents";
 const Home = () => {
   return (
     <>
@@ -9,6 +10,7 @@ const Home = () => {
       <div className="container_page">
         <Aim />
         <Facilities />
+        <GoodResultStudents />
       </div>
     </>
   );

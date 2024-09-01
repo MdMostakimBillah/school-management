@@ -1,0 +1,29 @@
+.studentsResult {
+  padding: 50px 0;
+}
+.studentsResult {
+  text-align: center;
+}
+.studentsResult h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.descriptionDetails {
+  padding: 20px 0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.descriptionDetails p,
+.descriptionDetails span {
+  font-size: 15px;
+}
+.sliderWraper {
+  margin: 0 10px;
+  background-color: #32a93e;
+  border-radius: 10px;
+  padding-top: 15px;
+  box-shadow: 0px 3px 5px #cfcfcf;
+}
+.signleSliderItem {
+  padding: 20px 0;
+}

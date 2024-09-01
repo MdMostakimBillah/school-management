@@ -25,6 +25,9 @@ h5,
 h6 {
   color: #32a93e;
 }
+body {
+  overflow-x: hidden;
+}
 /* flex between  */
 .flex-between {
   display: flex;
@@ -43,4 +46,11 @@ h6 {
   .container_page {
     width: 90% !important;
   }
+}
+
+/* slider  */
+.slick-slider button {
+  background-color: #32a93e !important;
+  border-radius: 50%;
+  color: red;
 }

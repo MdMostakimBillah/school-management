@@ -89,3 +89,55 @@ export const facilities = [
   },
   { title: "বাথরুম:", details: "প্রয়োজনীয় স্থান।" },
 ];
+import { studentStudent } from "../assets/assets";
+export const goodResultStudens = [
+  {
+    name: "আবদুল্লাহ আল মুত্তাকী",
+    class: "অষ্টম",
+    gpa: "৫.০০",
+    position: "প্রথম",
+    img: studentStudent,
+  },
+  {
+    name: "আবদুল্লাহ আল মুত্তাকী",
+    class: "অষ্টম",
+    gpa: "৫.০০",
+    position: "প্রথম",
+    img: studentStudent,
+  },
+  {
+    name: "আবদুল্লাহ আল মুত্তাকী",
+    class: "অষ্টম",
+    gpa: "৫.০০",
+    position: "প্রথম",
+    img: studentStudent,
+  },
+  {
+    name: "আবদুল্লাহ আল মুত্তাকী",
+    class: "অষ্টম",
+    gpa: "৫.০০",
+    position: "প্রথম",
+    img: studentStudent,
+  },
+  {
+    name: "আবদুল্লাহ আল মুত্তাকী",
+    class: "অষ্টম",
+    gpa: "৫.০০",
+    position: "প্রথম",
+    img: studentStudent,
+  },
+  {
+    name: "আবদুল্লাহ আল মুত্তাকী",
+    class: "অষ্টম",
+    gpa: "৫.০০",
+    position: "প্রথম",
+    img: studentStudent,
+  },
+  {
+    name: "আবদুল্লাহ আল মুত্তাকী",
+    class: "অষ্টম",
+    gpa: "৫.০০",
+    position: "প্রথম",
+    img: studentStudent,
+  },
+];
