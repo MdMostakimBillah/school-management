@@ -1,8 +1,6 @@
 .aimSectionWraper {
   max-width: 100%;
   padding: 100px 0;
-  display: flex;
-  justify-content: space-between;
 }
 .first {
   width: 47%;
@@ -28,12 +26,13 @@
 .second ul li {
   position: relative;
   padding-left: 1.8em;
+  /* background-color: red; */
 }
 .second ul li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 25%;
+  top: 50%;
   transform: translateY(-50%);
   width: 20px;
   height: 20px;

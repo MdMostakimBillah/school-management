@@ -1,12 +1,13 @@
 import classes from "./style/Aim.module.css";
-import { sample, myPlan } from "../assets/assets";
 import { AimList } from "../content/index";
+import { sample } from "../assets/assets";
 const Aim = () => {
   return (
-    <div className={classes.aimSectionWraper}>
+    <div className={`${classes.aimSectionWraper} flex-between`}>
       <div className={classes.first}>
-        <img src={myPlan} alt="" />
+        <img src={sample} alt="" />
       </div>
+
       <div className={classes.second}>
         <h1>আমাদের লক্ষ্য-</h1>
         <ul>
