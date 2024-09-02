@@ -1,0 +1,108 @@
+.VoiceTeacher {
+  padding: 50px 0;
+}
+.VoiceTeacher h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.voiceWraper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.headTeacherDocuments {
+  display: flex;
+  flex-direction: column;
+}
+.headTeacherDocuments div {
+  text-align: center;
+  padding: 30px 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-top: -10px;
+}
+.name,
+.school {
+  font-weight: bold;
+}
+.name {
+  font-size: 15px;
+}
+.school {
+  font-size: 20px;
+}
+.degree {
+  font-size: 14px;
+  font-weight: 400;
+}
+.voicerPhoto {
+  width: 35%;
+  overflow: visible;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0px 3px 5px #cfcfcf78;
+}
+.theVoice {
+  width: 65%;
+  background-color: rgb(245, 245, 245);
+  border-radius: 15px;
+  margin-left: -1%;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  border: 5px solid #fff;
+}
+.voiserInfo {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+.voiserInfo p {
+  color: #32a93e;
+  font-weight: bold;
+}
+@media (max-width: 900px) {
+  .theVoice {
+    margin-left: 0;
+    width: 63%;
+  }
+  .voiceWraper {
+    justify-content: space-between;
+  }
+  .voiserInfo {
+    right: 3%;
+    bottom: 1%;
+  }
+}
+@media (max-width: 767px) {
+  .voiceWraper {
+    display: block;
+    position: relative;
+    margin-top: 50px;
+  }
+  .voicerPhoto {
+    position: absolute;
+    top: -30px;
+    left: 42%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    z-index: 10;
+  }
+  .theVoice {
+    width: 100%;
+    margin-left: 0;
+    height: 100%;
+    z-index: 1;
+  }
+  .firstVoice {
+    margin-top: 50px;
+    padding: 0px 0px 30px 0px;
+  }
+  .headTeacherDocuments div {
+    display: none;
+  }
+}

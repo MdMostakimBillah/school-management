@@ -20,6 +20,14 @@ const GoodResultStudents = () => {
         },
       },
       {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,

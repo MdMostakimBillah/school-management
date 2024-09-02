@@ -1,7 +1,19 @@
-nav {
+.navbar {
   width: 100vw;
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(255 255 255 / 84%);
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 999;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px #00000014;
+  backdrop-filter: blur(10px);
+}
+.hidden {
+  transform: translateY(-100px) !important;
+}
+.visible {
+  transform: translateY(0) !important;
 }
 .logo {
   width: 60px;
@@ -47,6 +59,7 @@ nav {
   width: 150px;
   background-color: #fff;
   display: none;
+  border: 1px solid rgb(214, 214, 214);
 }
 .submenuList li:hover a {
   background-color: rgb(153, 153, 153);

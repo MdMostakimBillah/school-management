@@ -1,25 +1,49 @@
 import classes from "./style/Navigation.module.css";
 import { MidleNavList, RightNav } from "../content/index";
 import { mainLogo } from "../assets/assets";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navigation = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  //sidebar responsive
   const [isActive, setIsActive] = useState(false);
   const toggleClass = () => {
     setIsActive(!isActive);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.pageYOffset;
+      if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For Mobile or negative scrolling
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
+
   return (
     <>
-      <nav>
+      <nav
+        className={`${classes.navbar} ${
+          isVisible ? classes.visible : classes.hidden
+        }`}
+      >
         <div className={`container_page flex-between`}>
-          {/* logo  */}
           <div className={classes.logo}>
             <a href="#">
               <img src={mainLogo} alt="logo" />
             </a>
           </div>
-
-          {/* responsive nav  */}
           <div
             className={`${isActive ? classes.active : ""}  ${
               classes.responsiveNavList

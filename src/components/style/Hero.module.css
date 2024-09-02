@@ -1,0 +1,65 @@
+.Hero {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  height: 100dvh;
+}
+.DescriptionSection {
+  width: 50%;
+}
+.DescriptionSection h1 {
+  margin-bottom: 25px;
+  font-size: 35px;
+}
+.DescriptionSection p {
+  margin-bottom: 10px;
+  line-height: 30px;
+  font-size: 17px;
+  color: rgb(26, 26, 26);
+}
+.DescriptionSection button {
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: #32a93e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.DescriptionSection button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #24962f;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+.DescriptionSection button:hover:before {
+  height: 100%;
+}
+.animatedImage {
+  width: 47%;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .Hero {
+    display: block !important;
+    height: 100%;
+    text-align: center;
+  }
+  .DescriptionSection {
+    width: 100%;
+  }
+  .animatedImage {
+    width: 100%;
+    margin-top: 55px;
+  }
+}
