@@ -1,0 +1,31 @@
+.othersComment {
+  padding: 50px 0;
+}
+.othersComment h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.singleComment {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 50px 20px;
+}
+.singleComment p {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(22 22 22);
+}
+.singleComment span {
+  font-weight: 400;
+  color: rgb(58, 58, 58);
+}
+.sliderWraper button {
+  display: none !important;
+}
+.sliderWraper {
+  background-color: rgb(141 141 141 / 12%);
+  border-radius: 10px;
+}

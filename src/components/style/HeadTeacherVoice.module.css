@@ -24,6 +24,7 @@
 .name,
 .school {
   font-weight: bold;
+  color: rgb(22 22 22);
 }
 .name {
   font-size: 15px;
@@ -53,6 +54,7 @@
   padding: 30px;
   position: relative;
   border: 5px solid #fff;
+  margin-top: -30px;
 }
 .voiserInfo {
   position: absolute;
