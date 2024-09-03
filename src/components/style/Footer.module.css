@@ -1,7 +1,85 @@
 .footer {
-  background: rgb(0, 51, 5);
-  background: linear-gradient(0deg, rgb(0, 27, 3) 25%, rgb(0, 78, 8) 100%);
-  width: 100%;
+  background: rgb(0 14 2);
 
   padding: 50px 0;
+  margin-top: 30px;
+}
+.searchWebsite {
+  width: 80%;
+  margin: -110px auto 20px auto;
+  border-radius: 5px;
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  background-color: #32a93e;
+}
+.searchWebsite form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.searchWebsite form input[type="text"] {
+  width: 80%;
+  padding: 10px 15px;
+  border: none;
+  outline-color: #179424;
+  font-size: 16px;
+  font-weight: 400;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.searchWebsite form input[type="submit"] {
+  width: 20%;
+  padding: 10px 15px;
+  border: none;
+  background-color: #179424;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.searchWebsite form input[type="submit"]:hover {
+  background-color: #097013;
+}
+.footerWraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  color: white;
+  overflow: visible;
+}
+.descriptionFooter {
+  width: 25%;
+}
+.descriptionFooter h1 {
+  margin: 10px 0;
+}
+.descriptionFooter p {
+  font-size: 14px;
+}
+.footerWraper div h3 {
+  margin: 10px 0;
+}
+.footerWraper div ul li {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+.footerWraper div ul li a {
+  color: #fff;
+  text-transform: lowercase;
+}
+@media (max-width: 767px) {
+  .footerWraper {
+    display: block;
+    text-align: center;
+  }
+  .descriptionFooter {
+    width: 100%;
+  }
 }
