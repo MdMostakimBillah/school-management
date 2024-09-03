@@ -6,6 +6,7 @@ import GoodResultStudents from "../GoodResultStudents";
 import Hero from "../Hero";
 import HeadTeacherVoice from "../HeadTeacherVoice";
 import OthersComment from "../OthersComment";
+import Footer from "../Footer";
 const Home = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Home = () => {
         <HeadTeacherVoice />
         <OthersComment />
       </div>
+      <Footer />
     </>
   );
 };
