@@ -1,0 +1,37 @@
+.applicationFormWraper {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.applicationFormWraper h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+form .singleLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+form .singleLine div {
+  display: flex;
+  flex-direction: column;
+}
+form .singleLine > div > label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+form .singleLine > div > input,
+form .singleLine > div > select {
+  padding: 10px 7px;
+  border: 2px solid #797979;
+  outline: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.firtsInpur {
+  width: 49%;
+}
+.SecondInpur {
+  width: 49%;
+}
