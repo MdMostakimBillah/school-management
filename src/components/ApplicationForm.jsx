@@ -17,17 +17,7 @@ const ApplicationForm = () => {
             <input type="text" />
           </div>
         </div>
-        {/* fother mother  */}
-        <div className={classes.singleLine}>
-          <div className={classes.firtsInpur}>
-            <label htmlFor="">প্রথম নাম:</label>
-            <input type="text" />
-          </div>
-          <div className={classes.SecondInpur}>
-            <label htmlFor="">শেষ নাম:</label>
-            <input type="text" />
-          </div>
-        </div>
+
         {/* date & nation  */}
         <div className={classes.singleLine}>
           <div className={classes.firtsInpur}>
@@ -37,45 +27,54 @@ const ApplicationForm = () => {
           <div className={classes.SecondInpur}>
             <label htmlFor="">জাতীয়তা:</label>
             <select name="" id="">
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
+              <option value="">বাংলাদেশী</option>
+              <option value="">অন্যান্য</option>
             </select>
           </div>
         </div>
         {/* jonmo sonod number  */}
         <div className={`${classes.singleLine} ${classes.DateOfBirthIdentity}`}>
           <div className={classes.firtsInpur}>
-            <label htmlFor="">প্রথম নাম:</label>
-            <input type="text" />
+            <label htmlFor="">জন্ম সনদ নাম্বার:</label>
+            <input type="number" />
           </div>
           <div className={classes.SecondInpur}>
-            <label htmlFor="">জাতীয়তা:</label>
+            <label htmlFor="">লিঙ্গ:</label>
             <select name="" id="">
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
+              <option value="male">পুরুষ</option>
+              <option value="female">নারী</option>
+              <option value="other">অন্যান্য</option>
             </select>
           </div>
         </div>
 
-        {/* baba mayer id number  */}
+        {/* fother mother  */}
         <div className={classes.singleLine}>
           <div className={classes.firtsInpur}>
-            <label htmlFor="">প্রথম নাম:</label>
+            <label htmlFor="">পিতার নাম:</label>
             <input type="text" />
           </div>
           <div className={classes.SecondInpur}>
-            <label htmlFor="">শেষ নাম:</label>
+            <label htmlFor="">মাতার নাম:</label>
             <input type="text" />
+          </div>
+        </div>
+        {/* baba mayer id number  */}
+        <div className={classes.singleLine}>
+          <div className={classes.firtsInpur}>
+            <label htmlFor="">পিতার ভোটার আইডি নাম্বার:</label>
+            <input type="number" />
+          </div>
+          <div className={classes.SecondInpur}>
+            <label htmlFor="">মাতার ভোটার আইডি নাম্বার:</label>
+            <input type="number" />
           </div>
         </div>
 
         {/* tikana  */}
         <div className={classes.singleLine}>
           <div className={classes.firtsInpur}>
-            <label htmlFor="">জন্ম তারিখ:</label>
+            <label htmlFor="">বিভাগ:</label>
             <select name="" id="">
               <option value="">জাতীয়তা:</option>
               <option value="">জাতীয়তা:</option>
@@ -84,7 +83,7 @@ const ApplicationForm = () => {
             </select>
           </div>
           <div className={classes.SecondInpur}>
-            <label htmlFor="">জাতীয়তা:</label>
+            <label htmlFor="">জেলা:</label>
             <select name="" id="">
               <option value="">জাতীয়তা:</option>
               <option value="">জাতীয়তা:</option>
@@ -96,7 +95,7 @@ const ApplicationForm = () => {
         {/* thana  */}
         <div className={classes.singleLine}>
           <div className={classes.firtsInpur}>
-            <label htmlFor="">জন্ম তারিখ:</label>
+            <label htmlFor="">থানা:</label>
             <select name="" id="">
               <option value="">জাতীয়তা:</option>
               <option value="">জাতীয়তা:</option>
@@ -106,7 +105,7 @@ const ApplicationForm = () => {
           </div>
           {/* psot office  */}
           <div className={classes.SecondInpur}>
-            <label htmlFor="">জাতীয়তা:</label>
+            <label htmlFor="">পোষ্ট অফিস:</label>
             <select name="" id="">
               <input type="text" />
             </select>
@@ -115,7 +114,7 @@ const ApplicationForm = () => {
         <div className={classes.singleLine}>
           {/* zip code */}
           <div className={classes.SecondInpur}>
-            <label htmlFor="">জাতীয়তা:</label>
+            <label htmlFor="">জিপ কোড:</label>
             <select name="" id="">
               <input type="number" />
             </select>
@@ -125,11 +124,11 @@ const ApplicationForm = () => {
         {/* purbe kothay porto  */}
         <div className={`${classes.singleLine} ${classes.previouScholl}`}>
           <div className={classes.firtsInpur}>
-            <label htmlFor="">প্রথম নাম:</label>
+            <label htmlFor="">পূর্বের প্রতিষ্ঠানের নাম:</label>
             <input type="text" />
           </div>
           <div className={classes.SecondInpur}>
-            <label htmlFor="">জাতীয়তা:</label>
+            <label htmlFor="">শ্রেণী:</label>
             <select name="" id="">
               <option value="">জাতীয়তা:</option>
               <option value="">জাতীয়তা:</option>
@@ -138,11 +137,11 @@ const ApplicationForm = () => {
           </div>
         </div>
 
-        {/* akhon ton class a vorti kraben  */}
+        {/* akhon kon class a vorti kraben  */}
         <div className={classes.singleLine}>
           {/* class  */}
           <div className={classes.firtsInpur}>
-            <label htmlFor="">জন্ম তারিখ:</label>
+            <label htmlFor="">ভর্তির শ্রেণী:</label>
             <select name="" id="">
               <option value="">জাতীয়তা:</option>
               <option value="">জাতীয়তা:</option>
@@ -152,12 +151,10 @@ const ApplicationForm = () => {
           </div>
           {/* bivag  */}
           <div className={classes.SecondInpur}>
-            <label htmlFor="">জাতীয়তা:</label>
+            <label htmlFor="">শাখা:</label>
             <select name="" id="">
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
+              <option value="">বিজ্ঞান</option>
+              <option value="">মানবিক</option>
             </select>
           </div>
         </div>
@@ -166,24 +163,24 @@ const ApplicationForm = () => {
         <div className={classes.singleLine}>
           {/* email  */}
           <div className={classes.firtsInpur}>
-            <label htmlFor="">প্রথম নাম:</label>
+            <label htmlFor="">ইমেইল:</label>
             <input type="email" />
           </div>
           {/* mobile number  */}
           <div className={classes.SecondInpur}>
-            <label htmlFor="">শেষ নাম:</label>
+            <label htmlFor="">মোবাইল নাম্বার:</label>
             <input type="number" />
           </div>
         </div>
         <div className={classes.singleLine}>
           {/* password  */}
           <div className={classes.firtsInpur}>
-            <label htmlFor="">প্রথম নাম:</label>
+            <label htmlFor="">পাসওয়ার্ড:</label>
             <input type="password" />
           </div>
           {/* confirm password */}
           <div className={classes.SecondInpur}>
-            <label htmlFor="">শেষ নাম:</label>
+            <label htmlFor="">পুনরায় আবার পাসওয়ার্ড দিন:</label>
             <input type="password" />
           </div>
         </div>
@@ -191,12 +188,12 @@ const ApplicationForm = () => {
         <div className={classes.singleLine}>
           {/* img  */}
           <div className={classes.firtsInpur}>
-            <label htmlFor="">প্রথম নাম:</label>
+            <label htmlFor="">পাসপোর্ট সাইজ ছবি:</label>
             <input type="file" />
           </div>
         </div>
         <div className={classes.submitButton}>
-          <button>প্রথম নাম</button>
+          <button>নিশ্চিত করুন</button>
         </div>
       </form>
     </div>
