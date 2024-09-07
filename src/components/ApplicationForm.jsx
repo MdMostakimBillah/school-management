@@ -1,14 +1,8 @@
 import { useState } from "react";
 import classes from "./style/ApplicationForm.module.css";
 import { country } from "../content/index";
+import { classNumber } from "../content/index";
 const ApplicationForm = () => {
-  // const [country, setCountry] = useState([]);
-  const [distric, setDistric] = useState([]);
-  const [upazilas, setUpazilas] = useState([]);
-  const [postOffice, setPostOffice] = useState([]);
-
-  console.log(country);
-
   const [formData, setFormData] = useState({
     studentFirstName: "",
     studentLastName: "",
@@ -26,21 +20,97 @@ const ApplicationForm = () => {
     phoneNumber: "",
     password: "",
     confirmPassword: "",
-    nationality: "",
     gendar: "",
-    selectedDivision: "",
-    selectedDistricts: "",
+    postOffice: "",
+    previousClass: "",
+    admissionClass: "",
+    section: "",
   });
+
   const inputHandler = (e) => {
     const { name, value } = e.target;
     setFormData((previousData) => ({
-      ...previousData,
-      [name]: value,
+      ...previousData, //previous all data here
+      [name]: value, //here create an object
     }));
+  };
+
+  // select option
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedDivision, setSelectedDivision] = useState("");
+  const [zilas, setZilas] = useState("");
+  const [selectedPostOffice, setSelectedPostOffice] = useState("");
+  const [divisions, setDivisions] = useState([]);
+  const [distric, setDistric] = useState([]);
+  const [upozila, setUpozila] = useState([]);
+  const [postOffice, setPostOffice] = useState([]);
+
+  //country selection function and carry the division in an array
+  const countrySelectHandler = (e) => {
+    const selectCountryName = e.target.value;
+    setSelectedCountry(selectCountryName);
+    const countrySelected = country.find(
+      (singleCountry) => singleCountry.name === selectCountryName
+    );
+
+    if (countrySelected) {
+      setDivisions(countrySelected.division);
+    } else {
+      setDivisions([]);
+    }
+  };
+  // division selection function and carry the
+  const divisionHandler = (e) => {
+    const selectDivisionName = e.target.value;
+    setSelectedDivision(selectDivisionName);
+    const divisionSelected = divisions.find(
+      (singleDivision) => singleDivision.name === selectDivisionName
+    );
+    if (divisionSelected) {
+      setDistric(divisionSelected.districts);
+    } else {
+      setDistric([]);
+    }
+  };
+  // upozela selection funciton and carry
+  const zelaHandler = (e) => {
+    const selectedUpozelaName = e.target.value;
+    setZilas(selectedUpozelaName);
+    const districSelected = distric.find(
+      (singleDistric) => singleDistric.name === selectedUpozelaName
+    );
+    if (districSelected) {
+      setUpozila(districSelected.upazilas);
+    } else {
+      setUpozila([]);
+    }
+  };
+  //post office selection fucntion and carry on array
+  const postOfficeHandler = (e) => {
+    const selectedPostOfficeName = e.target.value;
+    setSelectedPostOffice(selectedPostOfficeName);
+    const postOfficeSelected = upozila.find(
+      (singlePostOffice) => singlePostOffice.name === selectedPostOfficeName
+    );
+    if (postOfficeSelected) {
+      setPostOffice(postOfficeSelected.postOffice);
+    } else {
+      setPostOffice([]);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    //adding data
+    setFormData((prevData) => ({
+      ...prevData,
+      country: selectedCountry,
+      divistion: selectedDivision,
+      zila: zilas,
+      postOffice: selectedPostOffice,
+    }));
+
     console.log(formData); // Process the form data
   };
 
@@ -86,12 +156,15 @@ const ApplicationForm = () => {
             <label htmlFor="">জাতীয়তা:</label>
             <select
               name="nationality"
-              value={formData.nationality}
-              onChange={inputHandler}
+              value={selectedCountry}
+              onChange={countrySelectHandler}
             >
               <option value="">জাতীয়তা নির্ধারণ করুন-</option>
-              <option value="বাংলাদেশী">বাংলাদেশী</option>
-              <option value="অন্যান্য">অন্যান্য</option>
+              {country.map((country, index) => (
+                <option key={index} value={country.name}>
+                  {country.name}
+                </option>
+              ))}
             </select>
           </div>
         </div>
@@ -194,59 +267,61 @@ const ApplicationForm = () => {
             <label htmlFor="">বিভাগ:</label>
             <select
               name="selectedDivision"
-              value={formData.selectedDivision}
-              onChange={inputHandler}
+              value={selectedDivision}
+              onChange={divisionHandler}
             >
               <option value="">বিভাগ নির্ধারণ করুন-</option>
-              {/* {country.map((item, inex) =>
-                item.name && formData.nationality
-                  ? item.division.map((allDivision, index) => (
-                      <option key={index} value={allDivision.name}>
-                        {allDivision.name}
-                      </option>
-                    ))
-                  : " "
-              )} */}
+              {divisions.map((division, index) => (
+                <option key={index} value={division.name}>
+                  {division.name}
+                </option>
+              ))}
             </select>
           </div>
           <div className={classes.SecondInpur}>
             <label htmlFor="">জেলা:</label>
             <select
               name="selectedDistricts"
-              value={formData.selectedDistricts}
-              onChange={inputHandler}
+              value={zilas}
+              onChange={zelaHandler}
             >
               <option value="">জেলা নির্ধারণ করুন- </option>
-              {/* {country.map((item, inex) =>
-                item.name && formData.nationality
-                  ? item.division.map((allDivision, index) =>
-                      console.log(allDivision.name && formData.selectedDivision)
-                    )
-                  : " "
-              )} */}
-              {/* {console.log(formData.selectedDivision)} */}
+              {distric.map((singleDistric, index) => (
+                <option key={index} value={singleDistric.name}>
+                  {singleDistric.name}
+                </option>
+              ))}
             </select>
           </div>
         </div>
         {/* thana  */}
         <div className={classes.singleLine}>
           <div className={classes.firtsInpur}>
-            <label htmlFor="">থানা:</label>
-            <select name="" id="">
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
+            <label htmlFor="">উপজেলা:</label>
+            <select value={selectedPostOffice} onChange={postOfficeHandler}>
+              <option value="">উপজেলা নির্ধারণ করুন-</option>
+
+              {upozila.map((singleUpozila, index) => (
+                <option key={index} value={singleUpozila.name}>
+                  {singleUpozila.name}
+                </option>
+              ))}
             </select>
           </div>
           {/* psot office  */}
           <div className={classes.SecondInpur}>
             <label htmlFor="">পোষ্ট অফিস:</label>
-            <select name="" id="">
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
+            <select
+              name="postOffice"
+              value={formData.postOffice}
+              onChange={inputHandler}
+            >
+              <option value="">পোষ্ট অফিস নির্ধারণ করুন-</option>
+              {postOffice.map((singlePostOffice, index) => (
+                <option key={index} value={singlePostOffice}>
+                  {singlePostOffice}
+                </option>
+              ))}
             </select>
           </div>
         </div>
@@ -276,10 +351,19 @@ const ApplicationForm = () => {
           </div>
           <div className={classes.SecondInpur}>
             <label htmlFor="">শ্রেণী:</label>
-            <select name="" id="">
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
+            <select
+              name="previousClass"
+              value={formData.previousClass}
+              onChange={inputHandler}
+            >
+              <option value="">
+                পূর্বের প্রতিষ্ঠানের শ্রেণী নির্ধারণ করুন-
+              </option>
+              {classNumber.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))}
             </select>
           </div>
         </div>
@@ -289,19 +373,31 @@ const ApplicationForm = () => {
           {/* class  */}
           <div className={classes.firtsInpur}>
             <label htmlFor="">ভর্তির শ্রেণী:</label>
-            <select name="" id="">
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
-              <option value="">জাতীয়তা:</option>
+            <select
+              name="admissionClass"
+              value={formData.admissionClass}
+              onChange={inputHandler}
+            >
+              <option value="">শ্রেণী নির্ধারণ করুন-</option>
+              {classNumber.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))}
             </select>
           </div>
           {/* bivag  */}
           <div className={classes.SecondInpur}>
             <label htmlFor="">শাখা:</label>
-            <select name="" id="">
-              <option value="">বিজ্ঞান</option>
-              <option value="">মানবিক</option>
+            <select
+              name="section"
+              value={formData.section}
+              onChange={inputHandler}
+            >
+              <option value="">শাখা নির্ধারণ করুন-</option>
+
+              <option value="science">বিজ্ঞান</option>
+              <option value="humanity">মানবিক</option>
             </select>
           </div>
         </div>
@@ -311,15 +407,20 @@ const ApplicationForm = () => {
           {/* email  */}
           <div className={classes.firtsInpur}>
             <label htmlFor="">ইমেইল:</label>
-            <input type="email" />
+            <input
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={inputHandler}
+            />
           </div>
           {/* mobile number  */}
           <div className={classes.SecondInpur}>
             <label htmlFor="">মোবাইল নাম্বার:</label>
             <input
-              name="email"
+              name="phoneNumber"
               type="number"
-              value={formData.email}
+              value={formData.phoneNumber}
               onChange={inputHandler}
             />
           </div>

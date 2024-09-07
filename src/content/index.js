@@ -159,6 +159,8 @@ export const commentForSchool = [
   },
 ];
 
+export const classNumber = ["প্রথম", "দ্বিতীয়", "তৃতীয়", "চতুর্থ", "পঞ্চম", "ষষ্ট", "সপ্তম", "অষ্টম", "নবম"];
+
 export const country = [
   {
     name: "বাংলাদেশী",
@@ -843,5 +845,9 @@ export const country = [
         districts: [],
       },
     ],
+  },
+  {
+    name: "India",
+    division: [],
   },
 ];
