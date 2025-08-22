@@ -27,6 +27,7 @@ h6 {
 }
 body {
   overflow-x: hidden;
+  background: #ffffff;
 }
 /* flex between  */
 .flex-between {
